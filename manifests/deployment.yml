@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: avacadoorgpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: avacadoorgpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: avacadoorgpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: avacadoorgpipelinesjavascriptdocker 
+          image: mycontreg112.azurecr.io/avacadoorgpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
